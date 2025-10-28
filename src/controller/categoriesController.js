@@ -9,7 +9,7 @@ const getAllCategories = async (req, res) => {
       data: data,
     });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       message: "Server error",
       serverMessage: error,
     });
@@ -25,7 +25,7 @@ const createNewCategories = async (req, res) => {
       data: body,
     });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       message: "Server error",
       serverMessage: error,
     });
@@ -45,7 +45,7 @@ const updateCategories = async (req, res) => {
       },
     });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       message: "Server error",
       serverMessage: error,
     });
@@ -60,7 +60,7 @@ const deleteCategories = async (req, res) => {
       message: "Delete Categori success",
     });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       message: "Server error",
       serverMessage: error,
     });
